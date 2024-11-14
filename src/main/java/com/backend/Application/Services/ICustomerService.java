@@ -9,4 +9,5 @@ public interface ICustomerService {
     CustomerDto getCustomer(Long id);
     List<CustomerDto> getAllCustomers();
     CustomerDto updateCustomer(Long id, CustomerDto updatedCustomerDto);
+    void deleteCustomer(Long id);
 }

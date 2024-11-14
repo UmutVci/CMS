@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class CustomerServiceImpl implements ICustomerService {
     private ICustomerRepository iCustomerRepository;
+
     @Override
     public CustomerDto createCustomer(CustomerDto customerDto) {
         Customer customer = CustomerMapper.mapToCustomer(customerDto);
@@ -46,4 +47,13 @@ public class CustomerServiceImpl implements ICustomerService {
         Customer updatedCustomer = iCustomerRepository.save(customer);
         return CustomerMapper.mapToCustomerDto(updatedCustomer);
     }
+
+    @Override
+    public void deleteCustomer(Long id) {
+        Customer customer = iCustomerRepository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("Could not find customer with id : " + id)
+        );
+        iCustomerRepository.deleteById(id);
+    }
+
 }
