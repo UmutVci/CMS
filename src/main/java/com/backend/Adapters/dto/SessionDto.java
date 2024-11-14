@@ -12,10 +12,8 @@ import java.util.Date;
 @AllArgsConstructor
 
 public class SessionDto {
-    private long id;
+    private long sessionId;
     private Movie movie;
     private Date startTime;
     private Date endTime;
 }
-
-
