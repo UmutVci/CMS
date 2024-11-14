@@ -20,7 +20,6 @@ public class CustomerController {
 
     // CREATING CUSTOMER
     @PostMapping
-
 @Operation(
         operationId = "createCustomer",
         summary = "Create new Customer",
@@ -44,7 +43,7 @@ public class CustomerController {
             description = "the Customer came!"
     )
     @ApiResponse(
-            responseCode = "20",
+            responseCode = "200",
             description = "Operation completed!"
     )
     public ResponseEntity<CustomerDto> getCustomer(@PathVariable("id") long id){
@@ -87,6 +86,15 @@ public class CustomerController {
     }
     // DELETING CUSTOMER
     @DeleteMapping("{id}")
+    @Operation(
+            operationId = "deleteCustomer",
+            summary = "Delete Customer",
+            description = "the Customer deleted!"
+    )
+    @ApiResponse(
+            responseCode = "200",
+            description = "the Customer deleted!"
+    )
     public ResponseEntity<String> deleteCustomer(@PathVariable("id") long id){
         customerService.deleteCustomer(id);
         return ResponseEntity.ok("Customer successfully deleted!");

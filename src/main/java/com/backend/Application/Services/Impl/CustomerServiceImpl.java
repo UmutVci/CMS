@@ -34,7 +34,7 @@ public class CustomerServiceImpl implements ICustomerService {
     @Override
     public List<CustomerDto> getAllCustomers() {
         List<Customer> customers = iCustomerRepository.findAll();
-        return customers.stream().map((Customer) -> CustomerMapper.mapToCustomerDto(Customer))
+        return customers.stream().map(CustomerMapper::mapToCustomerDto)
                 .collect(Collectors.toList());
     }
 
