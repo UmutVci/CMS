@@ -1,21 +1,20 @@
-package com.backend.Adapters.dto;
+package com.backend.Application.Services.Models;
 
-import com.backend.Application.Services.Models.Movie;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import java.util.Date;
-@Getter
+
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class SessionDto {
+public class Session {
     private long id;
     private Movie movie;
     private Date startTime;
     private Date endTime;
 }
-
-
