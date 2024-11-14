@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @Entity
@@ -17,7 +19,11 @@ import lombok.Setter;
 public class SessionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
-
-
+    private long id;
+    @Column(name = "movieName")
+    private String name;
+    @Column(name = "startTime")
+    private Date startTime;
+    @Column(name = "endTime")
+    private Date endTime;
 }
