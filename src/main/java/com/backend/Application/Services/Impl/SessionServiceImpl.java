@@ -6,10 +6,13 @@ import com.backend.Application.Services.ISessionService;
 import com.backend.Application.Services.Models.Session;
 import com.backend.Domain.Repository.ISessionRepository;
 import com.backend.exceptions.ResourceNotFoundException;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@AllArgsConstructor
+@Service
 public class SessionServiceImpl implements ISessionService {
 
 private ISessionRepository sessionRepository;
@@ -42,7 +45,7 @@ return SessionMapper.mapToSessionDto(savedSession);
     }
 
     @Override
-    public List<SessionDto> getAllSession(long sessionId) {
+    public List<SessionDto> getAllSession() {
         List<Session>sessions=sessionRepository.findAll();
         return sessions.stream().map(
                 (session) -> SessionMapper.mapToSessionDto(session)).collect(Collectors.toList())
