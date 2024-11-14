@@ -13,7 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 
 public class Session {
-    private long id;
+    private long Id;
     private Movie movie;
     private Date startTime;
     private Date endTime;

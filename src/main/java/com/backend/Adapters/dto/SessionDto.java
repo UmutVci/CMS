@@ -12,7 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 
 public class SessionDto {
-    private long sessionId;
+    private long Id;
     private Movie movie;
     private Date startTime;
     private Date endTime;

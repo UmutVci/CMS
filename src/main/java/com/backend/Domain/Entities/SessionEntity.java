@@ -21,7 +21,7 @@ import java.util.Date;
 public class SessionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long Id;
 
 
     @JoinColumn(name = "movie")
