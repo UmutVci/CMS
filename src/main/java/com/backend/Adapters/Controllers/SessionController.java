@@ -1,14 +1,11 @@
 package com.backend.Adapters.Controllers;
-import com.backend.Application.Services.Models.Session;
 
 import com.backend.Adapters.dto.SessionDto;
 import com.backend.Application.Services.ISessionService;
-import com.backend.Application.Services.Impl.SessionServiceImpl;
 import com.backend.Domain.Repository.ISessionRepository;
 import lombok.AllArgsConstructor;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
