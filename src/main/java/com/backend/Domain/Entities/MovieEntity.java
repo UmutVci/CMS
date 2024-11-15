@@ -1,8 +1,6 @@
 package com.backend.Domain.Entities;
 
 import jakarta.persistence.*;
-import jakarta.transaction.Transactional;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name = "movie_details")
 public class MovieEntity {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

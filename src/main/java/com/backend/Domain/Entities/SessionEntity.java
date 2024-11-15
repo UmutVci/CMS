@@ -47,3 +47,4 @@ public class SessionEntity {
         this.startTime = startTime;
     }
 }
+
