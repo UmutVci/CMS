@@ -5,18 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Movie {
-
-
-    private long id;
-    private String movieName;
-    private int duration;
-    private String genre;
-    private int price;
-    private int ageRestriction;
+public class Session {
+    private long Id;
+    private Movie movie;
+    private Date startTime;
+    private Date endTime;
 }
