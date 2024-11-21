@@ -1,5 +1,4 @@
-package com.backend.Domain.Entities;
-
+package com.backend.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -8,8 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @Table(name = "seats")
 public class SeatEntity {

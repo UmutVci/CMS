@@ -1,7 +1,7 @@
-package com.backend.Domain.Repository;
+package com.backend.domain.repository;
 
-import com.backend.Application.Services.Models.Movie;
+import com.backend.domain.entities.MovieEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IMovieRepository extends JpaRepository<Movie,Long> {
+public interface IMovieRepository extends JpaRepository<MovieEntity, Long> {
 }

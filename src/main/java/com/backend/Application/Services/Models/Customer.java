@@ -1,23 +1,13 @@
-package com.backend.Application.Services.Models;
+package com.backend.Application.Services.models;
 
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Setter
-@Getter
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-@Entity
-@Table(name="Customer")
-public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name="name")
+@NoArgsConstructor
+public class Customer extends DataObject {
     private String name;
-    @Column(name="age")
     private int age;
-
-
-
 }

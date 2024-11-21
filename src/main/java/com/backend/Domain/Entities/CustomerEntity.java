@@ -1,16 +1,13 @@
-package com.backend.Domain.Entities;
+package com.backend.domain.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-@Setter
-@Getter
-@AllArgsConstructor
+import lombok.*;
+
+@Data
 @NoArgsConstructor
+@Table(name ="customers")
+@Inheritance(strategy = InheritanceType.JOINED)
 @Entity
-@Table(name ="customer")
 public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,11 +16,5 @@ public class CustomerEntity {
     private String name;
     @Column(name ="age", nullable = false)
     private int age;
-    CustomerEntity(String name, int age){
-        this.name=name;
-        this.age=age;
-    }
-
-
 
 }

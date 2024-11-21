@@ -1,22 +1,9 @@
-package com.backend.Application.Services.Models;
+package com.backend.Application.Services.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-
-public class Movie {
-
-
+public class Movie extends DataObject {
     private long id;
-    private String movieName;
-    private int duration;
+
+    private String title;
     private String genre;
-    private int price;
-    private int ageRestriction;
+    private Integer duration;
 }

@@ -1,7 +1,8 @@
-package com.backend.Domain.Repository;
+package com.backend.domain.repository;
 
-import com.backend.Application.Services.Models.Customer;
+import com.backend.Application.Services.models.Customer;
+import com.backend.domain.entities.CustomerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ICustomerRepository extends JpaRepository<Customer, Long> {
+public interface ICustomerRepository extends JpaRepository<CustomerEntity, Long> {
 }
