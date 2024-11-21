@@ -13,15 +13,15 @@ public class ReservationEntity {
     private long id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="session_id", referencedColumnName = "id")
+    @JoinColumn(name = "session_id", referencedColumnName = "id")
     private SessionEntity session;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="customer_id", referencedColumnName = "id")
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private CustomerEntity customer;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="seat_id", referencedColumnName = "id")
+    @JoinColumn(name = "seat_id", referencedColumnName = "id")
     private SeatEntity seat;
 
 
